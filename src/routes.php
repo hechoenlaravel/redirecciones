@@ -1,9 +1,9 @@
 <?php
 // Routes
 
-$app->get('/', function ($request, $response, $args) {
+$app->get('/[{path:.*}]', function($request, $response, $path = null) {
     header('Location: http://www.hechoenlaravel.com', 301);
-    die;
+   	die; 
 });
 
 $app->get('/podcast', function ($request, $response, $args) {
@@ -14,9 +14,4 @@ $app->get('/podcast', function ($request, $response, $args) {
 $app->get('/workshops', function ($request, $response, $args) {
     header('Location: https://www.youtube.com/channel/UCQTmuJvtkHlXRQSrydoP_OA', 301);
     die;
-});
-
-$app->get('/[{path:.*}]', function($request, $response, $path = null) {
-    header('Location: https://www.youtube.com/channel/UCQTmuJvtkHlXRQSrydoP_OA', 301);
-   	die; 
 });
