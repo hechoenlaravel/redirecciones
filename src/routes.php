@@ -20,7 +20,3 @@ $app->get('/[{path:.*}]', function($request, $response, $path = null) {
     header('Location: https://www.youtube.com/channel/UCQTmuJvtkHlXRQSrydoP_OA', 301);
    	die; 
 });
-
-$app->get('/:method', function($method) use ($app) {
-   
-})->conditions(array('method' => '.+'));
