@@ -1,7 +1,7 @@
 <?php
 // Routes
 
-$app->get('/[{path:.*}]', function($request, $response, $path = null) {
+$app->get('/', function($request, $response, $path = null) {
     header('Location: http://www.hechoenlaravel.com', 301);
    	die; 
 });
